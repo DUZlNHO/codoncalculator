@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Aminoácidos</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+        <link rel="shortcut icon" href="#">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="box">
+        </div>
+        <img id='dnaimg' src="{{ url_for('static', filename='img/dna.png') }}" alt="DNA">
+        <h1 id="titulo">Aminoácidos</h1>
+        <form action="http://localhost:5000/calc" method="post">
+            <select name="dr" id="dr">
+                <option value="dna">DNA</option>
+                <option value="rna" selected="selected">RNA</option>
+            </select>
+            <select name="ct" disabled id="ct">
+                <option value="5">5 → 3</option>
+                <option value="3">3 → 5</option>
+            </select>
+            <textarea name="seq" id="seq" placeholder="Sequência" rows="4" cols="30" pattern="acgtu"></textarea>
+            <input type="checkbox" name="peptidio" id="peptidio">
+            <label for="peptidio" id="labelpep">Buscar Peptídio</label>
+            <input type="submit" value="Enviar" id="submit">
+        </form>
+        <footer>
+            By Eduardo Henrique da Silva, IFSULDEMINAS - Campus Inconfidentes, 2022
+        </footer>
+        <video id="loading" muted autoplay loop><source src="{{ url_for('static', filename='img/dna_2.mp4') }}" type="video/mp4"></video>
+        <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/indexjquery.js') }}"></script>
+    </body>
+</html>

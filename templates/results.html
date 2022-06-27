@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Aminoácidos</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}">
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <nav id="bar">
+        <ul>
+            <li id="back">
+                <h1 id="back"><a href="http://127.0.0.1:5000">Voltar</a></h1>
+            </li>
+            <li>
+                <h1><a href="http://127.0.0.1:5000/results">DNA/RNA</a></h1>
+            </li>
+            <li>
+                <h1><a href="http://127.0.0.1:5000/results2">Aminoácidos</a></h1>
+            </li>
+            <li>
+                <h1><a href="http://127.0.0.1:5000/results3">Peptídio</a></h1>
+            </li>
+        </ul>
+    </nav>
+    <h1 id="dna">DNA</h1>
+    <h1 id="rna">RNA</h1>
+    <h1 id="cinco">5'</h1>
+    <h1 id="tres">3'</h1>
+    <img id="imagem" src="{{ url_for('static', filename='img/output.png') }}">
+    <div class="foot"></div>
+    <footer>
+        By Eduardo Henrique da Silva, IFSULDEMINAS - Campus Inconfidentes, 2022
+    </footer>
+    <script src=""></script>
+</body>
+
+</html>
