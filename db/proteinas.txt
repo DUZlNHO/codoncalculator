@@ -19,8 +19,8 @@ uau tirosina
 uac tirosina
 uag stop
 uua leucina
-uuu fenil-alanina
-uuc fenil-alanina
+uuu fenilanina
+uuc fenilanina
 uug leucina
 uca serina
 ucu serina
@@ -46,10 +46,10 @@ cga arginina
 cgu arginina
 cgc arginina
 cgg arginina
-gaa acido-glutamico
-gau acido-aspartico
-gac acido-aspartico
-gag acido-glutamico
+gaa acidoglutamico
+gau acidoaspartico
+gac acidoaspartico
+gag acidoglutamico
 gua valina
 guu valina
 guc valina

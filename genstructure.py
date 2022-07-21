@@ -13,10 +13,9 @@ def genstructure(seq):
             seqdna += 't'
         else:
             seqdna += i
-    
-    dist = 460
 
-    canvas = Image.new('RGB', (2500, len(seq)*460 + 80), '#cccccc')
+    canvas = Image.new('RGB', (2500, len(seq)*460 + 80 + 600), '#cccccc')
+    canvas.paste(Image.open(abs + '/dnastructure/header.png'), (0, 0))
     dnacanvas = Image.new('RGB', (1250, len(seq)*460 + 80), '#cccccc')
     rnacanvas = Image.new('RGB', (1250, len(seq)*460 + 80), '#cccccc')
 
@@ -34,8 +33,8 @@ def genstructure(seq):
         else:
             rnacanvas.paste(Image.open(abs + eval('re' + letter)), (0, index*460), mask=Image.open(abs + eval('re' + letter)))
     
-    canvas.paste(dnacanvas, (0, 0))
-    canvas.paste(rnacanvas, (1750, 0))
+    canvas.paste(dnacanvas, (0, 0 + 600))
+    canvas.paste(rnacanvas, (1750, 0 + 600))
 
     if __name__ == '__main__':
         canvas.show()

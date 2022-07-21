@@ -10,14 +10,11 @@ def get3Dprotein(code):
     url_base_soup = BeautifulSoup(url_base_txt, 'html.parser')
     code_pdb = url_base_soup.find_all('a', target="_blank")[0].text
 
-    url = 'https://www.uniprot.org/uniprot/' + code_pdb
-    html_txt = requests.get(url).text
-    soup = BeautifulSoup(html_txt, 'html.parser')
-    head = soup.find('head')
-    head = str(head)
-    print(codigohor, code_pdb)
+    info = url_base_soup.find_all("ul", class_="sec-infor")
+    function = info[2].find_all("li")[0].text
+    print(codigohor, code_pdb, function[11:], sep='\n')
 
-    return head, code_pdb
+    return None, code_pdb, function
 
 if __name__ == '__main__':
     get3Dprotein('CYIQNCPLG')

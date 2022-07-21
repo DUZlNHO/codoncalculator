@@ -18,9 +18,19 @@
     src: url(../fonts/OdinRound.otf);
 }
 
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/PoppinsRegular.ttf);
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url(../fonts/PoppinsBold.ttf);
+}
+
 body {
     background-image: url('../img/index.png');
-    font-family: 'Typo';
+    font-family: 'Poppins';
     font-size: 14px;
     color: #333;
     line-height: 1.5;
@@ -80,7 +90,6 @@ body {
     background-color: #ddd;
     border-radius: 20px;
     text-align: center;
-    font-family: Odin;
     font-size: 20px;
     font-weight: bold;
     z-index: -1;
